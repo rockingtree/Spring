@@ -3,8 +3,8 @@ package com.u3.entity.paper;
 import com.u3.api.Paper;
 
 public class TextPaper implements Paper {
-    private int charPerLine = 11;   //每行字符数
-    private int linePerPage = 4;    //每页行数
+    private int charPerLine;   //每行字符数
+    private int linePerPage;    //每页行数
     private String content = "";         //纸张内容
     private int posX = 0;   //当前横向位置, 从0到charPerLine-1
     private int posY = 0;   //当前行数, 从0到linePerPage-1
@@ -44,7 +44,7 @@ public class TextPaper implements Paper {
     }
 
     public void setCharPerLine(int charPerLine) {
-        this.charPerLine=charPerLine;
+        this.charPerLine = charPerLine;
     }
 
     public void setLinePerPage(int linePerPage) {
