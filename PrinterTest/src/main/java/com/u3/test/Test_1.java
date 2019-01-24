@@ -12,6 +12,6 @@ public class Test_1 {
         //获取实例
         Printer printer = (Printer) app.getBean("printer");
         //打印内容
-        printer.print("一十一年无晴雨, 雁子崖前静听风");
+        printer.print("一十一年无晴雨, 雁子崖前静听风。");
     }
 }
