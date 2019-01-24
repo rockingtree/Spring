@@ -1,4 +1,4 @@
-package com.u3.test;
+package com.u3;
 
 import com.u3.entity.Person;
 import org.springframework.context.ApplicationContext;
