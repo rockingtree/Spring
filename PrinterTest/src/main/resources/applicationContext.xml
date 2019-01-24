@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--声明彩色墨盒-->
+    <bean id="coloredInk" class="com.u3.entity.ink.ColoredInk"/>
+    <!--声明灰色墨盒-->
+    <bean id="greyInk" class="com.u3.entity.ink.GreyInk"/>
+    <!--声明A4纸张-->
+    <bean id="a4Paper" class="com.u3.entity.paper.TextPaper">
+        <property name="charPerLine" value="9"/>
+        <property name="linePerPage" value="8"/>
+    </bean>
+
+    <!--组装打印机-->
+    <bean id="printer" class="com.u3.entity.printer.Printer">
+        <property name="ink" ref="coloredInk"/>
+        <property name="paper" ref="a4Paper"/>
+    </bean>
+</beans>
